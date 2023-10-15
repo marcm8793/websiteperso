@@ -4,19 +4,19 @@ import Link from "next/link";
 import { ArrowUpRightSquare, Github } from "lucide-react";
 const projects = [
   {
+    name: "NextApps",
+    description: "Your productivity dashboard.",
+    image: "/nextapps2.png",
+    github: "https://github.com/marcm8793/todonextprod",
+    link: "https://www.nextapps.dev/",
+  },
+  {
     name: "Personnal Website",
     description:
       "Website to describe my projects and my experience as a developper.",
     image: "/portfolio2.png",
     github: "https://github.com/marcm8793/resumeprod",
     link: "/",
-  },
-  {
-    name: "NextApps",
-    description: "Your productivity dashboard.",
-    image: "/nextapps2.png",
-    github: "https://github.com/marcm8793/todonextprod",
-    link: "https://www.nextapps.dev/",
   },
 ];
 

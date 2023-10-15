@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import Loader from "@/components/Loader";
 
 interface Article {
   id: number;
@@ -14,15 +15,24 @@ interface Article {
 
 const Page = () => {
   const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("/api/article")
-      .then((response) => setArticles(response.data))
-      .catch((error) =>
-        console.error("Erreur lors du chargement des articles :", error)
-      );
+      .then((response) => {
+        setArticles(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Erreur lors du chargement des articles :", error);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   const sortedArticles = articles.sort((a, b) => {
     const dateA = new Date(a.created_at);
