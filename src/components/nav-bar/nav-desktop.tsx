@@ -11,7 +11,7 @@ export const NavDesktop = () => {
           <Link
             href={href}
             key={title}
-            target={href === "Resume" ? "_blank" : "_self"}
+            target={href === "/CV_website.pdf" ? "_blank" : "_self"}
           >
             <Button variant="ghost">
               <Icon />

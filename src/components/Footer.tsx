@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import React from "react";
+import Image from "next/image";
 
 const Footer = () => (
   <footer className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
@@ -27,9 +27,19 @@ const Footer = () => (
           rel="noreferrer"
           target="_blank"
         >
-          <Twitter
-            className="hover:-translate-y-1 transition-transform cursor-pointer dark:text-neutral-100"
-            size={30}
+          <Image
+            className="hover:-translate-y-1 transition-transform cursor-pointer hidden dark:block"
+            height="25"
+            width="25"
+            src={"/logo-white.png"}
+            alt="Twitter"
+          />
+          <Image
+            className="hover:-translate-y-1 transition-transform cursor-pointer  dark:hidden"
+            height="25"
+            width="25"
+            src={"/logo-black.png"}
+            alt="Twitter"
           />
         </a>
 

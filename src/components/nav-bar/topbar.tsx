@@ -10,7 +10,7 @@ export const Topbar = () => {
   return (
     <div
       className={`container px-8 mx-auto justify-center items-center ${
-        isOpen ? "fixed" : ""
+        isOpen ? "fixed top-0" : ""
       } bg-background`}
     >
       <nav className="flex items-start justify-between py-4">
