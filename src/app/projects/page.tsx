@@ -4,9 +4,17 @@ import Link from "next/link";
 import { ArrowUpRightSquare, Github } from "lucide-react";
 const projects = [
   {
+    name: "MemoStash",
+    description:
+      "All-in-one workspace that combines note-taking &project management into a single, customizable platform.",
+    image: "/memostash.png",
+    github: "https://github.com/marcm8793/NotionLP",
+    link: "https://memostash-lp.vercel.app/",
+  },
+  {
     name: "NextApps",
     description: "Your productivity dashboard.",
-    image: "/nextapps2.png",
+    image: "/nextapps4.png",
     github: "https://github.com/marcm8793/todonextprod",
     link: "https://www.nextapps.dev/",
   },
@@ -37,15 +45,40 @@ const page = () => {
                   <Link href={project.link}>
                     <Image
                       src={project.image}
-                      alt=""
+                      alt="Project Image"
                       width={500}
-                      height={500}
+                      height={300}
                       className="rounded-xl shadow-xl hover:opacity-70 border"
                     />
                   </Link>
                 </div>
                 <div className="mt-8 md:w-1/2">
-                  <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
+                  <Link href={project.link} target="_blank">
+                    <h1
+                      className="text-4xl font-bold mb-6 cursor-pointer relative
+                    inline-block
+                transition-all
+                duration-500
+                before:content-['']
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-1.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-gradient-to-r
+                before:from-gray-600
+                before:via-slate-400
+                before:to-zinc-500
+                hover:before:w-full
+                hover:before:opacity-100"
+                    >
+                      {project.name}
+                    </h1>
+                  </Link>
                   <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                     {project.description}
                   </p>
