@@ -6,7 +6,7 @@ const projects = [
   {
     name: "MemoStash",
     description:
-      "All-in-one workspace that combines note-taking &project management into a single, customizable platform.",
+      "All-in-one workspace that combines note-taking & project management into a single, customizable platform.",
     image: "/memostash.png",
     github: "https://github.com/marcm8793/NotionLP",
     link: "https://memostash-lp.vercel.app/",
@@ -20,8 +20,7 @@ const projects = [
   },
   {
     name: "Personnal Website",
-    description:
-      "Website to describe my projects and my experience as a developper.",
+    description: "My projects and journey as a developper.",
     image: "/portfolio2.png",
     github: "https://github.com/marcm8793/resumeprod",
     link: "/",
