@@ -4,6 +4,13 @@ import Link from "next/link";
 import { ArrowUpRightSquare, Github } from "lucide-react";
 const projects = [
   {
+    name: "Code Space",
+    description: "Coding collaboration platform with AI-powered code answers.",
+    image: "/CodeSpace.png",
+    github: "https://github.com/marcm8793/devflow",
+    link: "https://devflow-phi.vercel.app/",
+  },
+  {
     name: "MemoStash",
     description:
       "All-in-one workspace that combines note-taking & project management into a single, customizable platform.",
@@ -41,7 +48,7 @@ const page = () => {
             <div key={idx}>
               <div className="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
                 <div className=" md:w-1/2">
-                  <Link href={project.link}>
+                  <Link href={project.link} target="_blank">
                     <Image
                       src={project.image}
                       alt="Project Image"
