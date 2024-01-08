@@ -1,7 +1,30 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import { ArrowUpRightSquare, Github } from "lucide-react";
+import { TbBrandNextjs } from "react-icons/tb";
+import { RiOpenaiFill } from "react-icons/ri";
+import {
+  SiTailwindcss,
+  SiZod,
+  SiPrisma,
+  SiRadixui,
+  SiMongoose,
+} from "react-icons/si";
+import {
+  BiLogoMongodb,
+  BiLogoTypescript,
+  BiLogoPostgresql,
+} from "react-icons/bi";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 const projects = [
   {
     name: "Code Space",
@@ -9,6 +32,15 @@ const projects = [
     image: "/CodeSpace.png",
     github: "https://github.com/marcm8793/devflow",
     link: "https://devflow-phi.vercel.app/",
+    tools: [
+      { icon: <BiLogoTypescript />, tooltip: "TypeScript" },
+      { icon: <TbBrandNextjs />, tooltip: "Next.js" },
+      { icon: <SiTailwindcss />, tooltip: "Tailwind CSS" },
+      { icon: <RiOpenaiFill />, tooltip: "OpenAI" },
+      { icon: <SiZod />, tooltip: "Zod" },
+      { icon: <BiLogoMongodb />, tooltip: "MongoDB" },
+      { icon: <SiMongoose />, tooltip: "Mongoose" },
+    ],
   },
   {
     name: "MemoStash",
@@ -17,6 +49,12 @@ const projects = [
     image: "/memostash.png",
     github: "https://github.com/marcm8793/NotionLP",
     link: "https://memostash-lp.vercel.app/",
+    tools: [
+      { icon: <BiLogoTypescript />, tooltip: "TypeScript" },
+      { icon: <TbBrandNextjs />, tooltip: "Next.js" },
+      { icon: <SiTailwindcss />, tooltip: "Tailwind CSS" },
+      { icon: "🐻", tooltip: "Zustand" },
+    ],
   },
   {
     name: "NextApps",
@@ -24,6 +62,15 @@ const projects = [
     image: "/nextapps4.png",
     github: "https://github.com/marcm8793/todonextprod",
     link: "https://www.nextapps.dev/",
+    tools: [
+      { icon: <BiLogoTypescript />, tooltip: "TypeScript" },
+      { icon: <TbBrandNextjs />, tooltip: "Next.js" },
+      { icon: <SiTailwindcss />, tooltip: "Tailwind CSS" },
+      { icon: <SiPrisma />, tooltip: "Prisma" },
+      { icon: <SiRadixui />, tooltip: "Radix/ShadcnUI" },
+      { icon: <SiZod />, tooltip: "Zod" },
+      { icon: <BiLogoPostgresql />, tooltip: "Postgresql" },
+    ],
   },
   {
     name: "Personnal Website",
@@ -31,6 +78,15 @@ const projects = [
     image: "/portfolio2.png",
     github: "https://github.com/marcm8793/resumeprod",
     link: "/",
+    tools: [
+      { icon: <BiLogoTypescript />, tooltip: "TypeScript" },
+      { icon: <TbBrandNextjs />, tooltip: "Next.js" },
+      { icon: <SiTailwindcss />, tooltip: "Tailwind CSS" },
+      { icon: <SiPrisma />, tooltip: "Prisma" },
+      { icon: <SiRadixui />, tooltip: "Radix/ShadcnUI" },
+      { icon: <SiZod />, tooltip: "Zod" },
+      { icon: <BiLogoPostgresql />, tooltip: "Postgresql" },
+    ],
   },
 ];
 
@@ -88,7 +144,27 @@ const page = () => {
                   <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                     {project.description}
                   </p>
-                  <div className="flex flex-row align-bottom space-x-4">
+
+                  {/* List of tools */}
+                  <div className="flex flex-row align-bottom text-2xl space-x-2 items-center">
+                    <p className="text-sm">Made with: &nbsp;</p>
+                    {project.tools?.map((tool, toolIdx) => (
+                      <div key={toolIdx} className="space-x-4 ">
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger className="cursor-default">
+                              {tool.icon}
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{tool.tooltip}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-row align-bottom space-x-4 mt-4">
                     <Link href={project.github} target="_blank">
                       <Github
                         size={30}
