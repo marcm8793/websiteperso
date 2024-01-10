@@ -31,7 +31,7 @@ const projects = [
     description: "Coding collaboration platform with AI-powered code answers.",
     image: "/CodeSpace.png",
     github: "https://github.com/marcm8793/devflow",
-    link: "https://devflow-phi.vercel.app/",
+    link: "https://www.codespace.forum/",
     tools: [
       { icon: <BiLogoTypescript />, tooltip: "TypeScript" },
       { icon: <TbBrandNextjs />, tooltip: "Next.js" },
