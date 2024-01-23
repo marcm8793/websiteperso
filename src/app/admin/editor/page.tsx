@@ -57,7 +57,7 @@ const Page = () => {
           ></Textarea>
         </div>
         <Editor
-          apiKey="yt6nh3gohozg0k1mhyg0785zlgynwe5me14knolnll8ervv4"
+          apiKey= {process.env.TINYMCE_API_KEY}
           onInit={(evt, editor) => (editorRef.current = editor)}
           initialValue="<p>This is the initial content of the editor.</p>"
           init={{

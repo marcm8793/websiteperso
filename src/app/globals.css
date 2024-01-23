@@ -85,4 +85,10 @@
   ul {
     @apply list-disc list-inside;
   }
+  a {
+    @apply underline;
+  }
+  li {
+    @apply ml-4;
+  }
 }
