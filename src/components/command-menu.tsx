@@ -63,11 +63,11 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandGroup heading="Actions">
             <CommandItem
               onSelect={() => {
-                setOpen(false);
                 window.print();
+                setOpen(false);
               }}
             >
-              <span>Print</span>
+              <span>Print or Save as PDF</span>
             </CommandItem>
           </CommandGroup>
           <CommandGroup heading="Links">

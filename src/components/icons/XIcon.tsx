@@ -1,11 +1,16 @@
 export const XIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>X</title>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="2.5rem"
+      height="2.5rem"
+      viewBox="0 0 24 24"
+      {...props}
+    >
       <path
         fill="currentColor"
-        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-      />
+        d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"
+      ></path>
     </svg>
   );
 };
