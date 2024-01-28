@@ -30,7 +30,7 @@ export const routes = [
   },
   {
     title: "Resume",
-    href: "/CV_website.pdf",
+    href: "/cv",
     Icon: FolderCheck,
   },
   {

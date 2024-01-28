@@ -51,9 +51,6 @@ export const NavMobile = ({ isOpen, setOpen }: any) => {
                         "flex p-3 rounded-xl items-center justify-center"
                       }
                       href={route.href}
-                      target={
-                        route.href === "/CV_website.pdf" ? "_blank" : "_self"
-                      }
                     >
                       <Button variant="ghost" className="w-full">
                         <span className="flex items-center text-lg">

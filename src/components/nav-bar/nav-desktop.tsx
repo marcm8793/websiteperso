@@ -8,11 +8,7 @@ export const NavDesktop = () => {
       {routes.map((route, key) => {
         const { Icon, href, title } = route;
         return (
-          <Link
-            href={href}
-            key={title}
-            target={href === "/CV_website.pdf" ? "_blank" : "_self"}
-          >
+          <Link href={href} key={title}>
             <Button variant="ghost">
               <Icon />
 

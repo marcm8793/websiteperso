@@ -9,8 +9,9 @@ export const RESUME_DATA = {
     "Project Manager aspiring to contribute positively to developing a more meaningful world through innovative technology.",
   summary:
     "Embarking on a new chapter as a project manager in finance, I am eagerly transitioning into the world of coding. Fueled by a deep passion for technology, I've enrolled in coding bootcamps and online courses to acquire the necessary skills. My vision is to merge my financial expertise with coding, creating innovative solutions and contributing actively to development projects.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/139041349?s=400&u=78fc2e2aa1d2b96e28b59310a647fa987b768f54&v=4",
-  personalWebsiteUrl: "marcmansour.dev",
+  avatarUrl:
+    "https://avatars.githubusercontent.com/u/139041349?s=400&u=78fc2e2aa1d2b96e28b59310a647fa987b768f54&v=4",
+  personalWebsiteUrl: "/",
   contact: {
     email: "marcm9387@gmail.com",
     tel: "+33688141676",
@@ -78,12 +79,7 @@ export const RESUME_DATA = {
         "Managed securities accounts for institutional clients. Created and maintained reports for clients and internal use.",
     },
   ],
-  skills: [
-    "JavaScript",
-    "TypeScript",
-    "React/Next.js",
-    "Node.js",
-  ],
+  skills: ["JavaScript", "TypeScript", "React/Next.js", "Node.js"],
   projects: [
     {
       title: "NextApps",
@@ -113,7 +109,14 @@ export const RESUME_DATA = {
     },
     {
       title: "Code Space",
-      techStack: ["Side Project", "Next.js", "OpenAI", "TailwindCSS", "Vercel", "MongoDB"],
+      techStack: [
+        "Side Project",
+        "Next.js",
+        "OpenAI",
+        "TailwindCSS",
+        "Vercel",
+        "MongoDB",
+      ],
       description:
         "Coding collaboration platform with AI-powered code answers.",
       link: {
