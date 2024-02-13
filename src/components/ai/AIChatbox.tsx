@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
-import { Message, useChat } from "ai/react";
 import { Bot, SendHorizontal, Trash, XCircle } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
+import { useChat, Message } from "ai/react";
 
 interface AIChatBoxProps {
   open: boolean;
