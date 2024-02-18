@@ -1,3 +1,4 @@
+import { Bot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,6 +34,12 @@ export default function Home() {
           >
             Projects
           </Link>
+          <p className="py-6">
+            Unlock a smart chat assistant! Click the{" "}
+            <Bot className="inline pb-1" /> icon to activate the AI and get
+            instant answers to your questions about me. Explore relevant website
+            sections just by asking the bot!
+          </p>
         </div>
       </div>
     </>
