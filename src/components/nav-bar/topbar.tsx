@@ -12,6 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import AIChatButton from "../ai/AIChatButton";
 
 export const Topbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -25,6 +26,7 @@ export const Topbar = () => {
         <NavMobile isOpen={isOpen} setOpen={setOpen} />
         <NavDesktop />
         <div className="justify-center items-center flex space-x-2">
+          <AIChatButton />
           <ModeToggle />
           <TooltipProvider>
             <Tooltip>

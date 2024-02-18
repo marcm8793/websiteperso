@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { Topbar } from "@/components/nav-bar/topbar";
@@ -10,8 +9,11 @@ import { Topbar } from "@/components/nav-bar/topbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Marc Mansour blog-portfolio",
-  description: "Web portfolio and blog",
+  title: {
+    template: "%s | Marc Mansour",
+    default: "Marc Mansour",
+  },
+  description: "Web portfolio with AI chatbot",
 };
 
 export default function RootLayout({
