@@ -48,7 +48,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
       <button onClick={onClose} className="mb-1 ms-auto block">
         <XCircle size={30} className="rounded-full bg-background" />
       </button>
-      <div className="flex h-[600px] flex-col rounded border bg-background shadow-xl">
+      <div className="flex h-[600px] flex-col rounded border bg-background shadow-xl border-white">
         <div className="mt-3 h-full overflow-y-auto px-3" ref={scrollRef}>
           {messages.map((message) => (
             <ChatMessage message={message} key={message.id} />
@@ -82,15 +82,14 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
                 the relevant information on this website.
               </p>
               <p className="text-sm text-muted-foreground">
-                PS: If you want to learn how to build your own AI chatbot, check
-                out the tutorial on the{" "}
+                PS: Thank you to{" "}
                 <a
                   href="https://www.youtube.com/c/codinginflow?sub_confirmation=1"
                   className="text-primary hover:underline"
                 >
                   Coding in Flow YouTube channel
-                </a>
-                .
+                </a>{" "}
+                😉.
               </p>
             </div>
           )}
