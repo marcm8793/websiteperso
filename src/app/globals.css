@@ -73,22 +73,4 @@
   body {
     @apply bg-background text-foreground;
   }
-  h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  ol {
-    @apply list-decimal list-inside;
-  }
-  ul {
-    @apply list-disc list-inside;
-  }
-  a {
-    @apply underline;
-  }
-  li {
-    @apply ml-4;
-  }
 }
