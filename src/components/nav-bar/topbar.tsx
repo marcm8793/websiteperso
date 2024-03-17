@@ -13,7 +13,9 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip";
 import AIChatButton from "../ai/AIChatButton";
-import { MobileNav } from "./navmobile";
+import { MobileNav } from "./navshadcn";
+import { MainNav } from "./navbarblog";
+import { NavigationMenuDemo } from "./navbardesktopshadcn";
 
 export const Topbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -24,9 +26,10 @@ export const Topbar = () => {
       } bg-background`}
     >
       <nav className="flex items-start justify-between py-4">
-        <NavMobile isOpen={isOpen} setOpen={setOpen} />
+        {/* <NavMobile isOpen={isOpen} setOpen={setOpen} /> */}
         {/* <MobileNav /> */}
-        <NavDesktop />
+        <MobileNav />
+        <NavigationMenuDemo />
         <div className="justify-center items-center flex space-x-2">
           <AIChatButton />
           <ModeToggle />

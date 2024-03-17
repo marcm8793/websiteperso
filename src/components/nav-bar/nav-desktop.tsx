@@ -11,7 +11,6 @@ export const NavDesktop = () => {
           <Link href={href} key={title}>
             <Button variant="ghost">
               <Icon />
-
               {title}
             </Button>
           </Link>

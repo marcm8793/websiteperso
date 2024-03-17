@@ -1,46 +1,30 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { Metadata } from "next";
-import { z } from "zod";
-
-import { columns } from "./_components/columns";
-import { DataTable } from "./_components/data-table";
-import { taskSchema } from "./_data/schema";
+import ReadingList from "@/components/reading-list/ReadingList";
 
 export const metadata: Metadata = {
-  title: "Articles",
-  description: "A list of articles on the web develpment. Enjoy! 📚",
+  title: "Reading List",
+  description: "A list of books I've read and recommend.",
 };
 
-// Simulate a database read for tasks.
-async function getTasks() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "src/app/blog4/_data/tasks.json")
-  );
-
-  const tasks = JSON.parse(data.toString());
-
-  return z.array(taskSchema).parse(tasks);
-}
-
-export default async function TaskPage() {
-  const tasks = await getTasks();
-
+const Page = () => {
   return (
     <>
       <div className="container h-full flex-1 flex-col space-y-8 p-8 md:flex">
         <div className="flex items-center justify-between space-y-2">
           <div>
             <h2 className="text-2xl font-bold tracking-tight">
-              Articles from the interweb
+              Books I recommend.
             </h2>
             <p className="text-muted-foreground">
-              Here&apos;s a list of some articles on the internets! Enjoy ! 📚
+              Books still exist in the digital age! Here are some I&apos;ve read
+              and that I recommend. 📋
             </p>
           </div>
         </div>
-        <DataTable data={tasks} columns={columns} />
+        <ReadingList />
       </div>
     </>
   );
-}
+};
+
+export default Page;

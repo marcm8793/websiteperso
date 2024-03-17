@@ -36,13 +36,7 @@ export function MobileNav({ children, onClick }: any) {
             onClick={() => setIsOpen(false)}
           >
             <Menu className="mr-2 size-4" aria-hidden="true" />
-            <span className="font-bold">{"/"}</span>
-            <span className="sr-only">Home</span>
           </Link>
-          <div className="p-2 place-items-center flex justify-between space-x-1 gap-2">
-            <AIChatButton />
-            <ModeToggle />
-          </div>
         </div>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="flex flex-col pl-1 pr-7">
